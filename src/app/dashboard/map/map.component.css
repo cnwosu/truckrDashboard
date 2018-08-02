@@ -1,0 +1,41 @@
+body {
+    background-color: rgb(235, 228, 228) !important;
+}
+
+.navbar {
+    background-color: #FDFAFA !important;
+}
+.navbar-brand img {
+    width: 180px !important;
+}
+
+.navbar-inverse .navbar-header{
+    flex: 1 !important;
+}
+.dropdown-toggle{
+    color: black !important;
+}
+.panel-body {
+    font-size: 30px;
+    font-weight: bold;
+    align-items: center;
+    text-align: center;
+}
+.btn {
+    color: black !important;
+    margin-top: 15px;
+    margin-bottom: 20px !important;
+    margin-left: 25px;
+    background-color: white !important;
+    padding-right: 25px !important;
+    padding-left: 25px !important;
+    font-weight: bold !important;
+}
+.btn-primary{
+    border-color: white !important;
+
+}
+
+agm-map {
+  height: 700px;
+}

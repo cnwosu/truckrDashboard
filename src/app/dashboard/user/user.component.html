@@ -1,0 +1,31 @@
+
+<!-- Page container -->
+<div class="page-container">
+  <!-- Page content -->
+  <div class="page-content">
+    <!-- Main content -->
+    <div class="content-wrapper">
+
+      <!-- Content area -->
+      <div class="content">
+        <!-- Simple panel -->
+        <div class="panel panel-flat">
+          <div class="panel-body">
+            <h1 class="text-semibold">Welcome Victoria, </h1>
+            <a routerLink="/new-request" class="content-group"> Make your first Request</a>
+          </div>
+          <!-- this creates a google map on the page with the given lat/lng from -->
+          <!-- the component as the initial center of the map: -->
+          <agm-map [latitude]="lat" [longitude]="lng">
+            <agm-marker [latitude]="currLat" [longitude]="currLong"></agm-marker>
+          </agm-map>
+        </div>
+        <!-- /simple panel -->       
+      </div>
+      <!-- /content area -->
+    </div>
+    <!-- /main content -->
+  </div>
+  <!-- /page content -->
+</div>
+<!-- /page container -->

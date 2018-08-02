@@ -1,0 +1,203 @@
+<!-- Main content -->
+<div class="content-wrapper col-md-10">
+
+    <!-- Page header -->
+    <div class="page-header">
+        <div class="breadcrumb-line">
+            <ul class="breadcrumb">
+                <li><a href="/"><i class="icon-home2 position-left"></i> Dashboard</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- /page header -->
+
+    <!-- Content area -->
+    <div class="content">
+        <!-- Timeline -->
+        <div class="timeline timeline-center content-group">
+            <div class="timeline-container">
+
+                <!-- Quick stats boxes -->
+                <div class="row">
+                    <div class="col-lg-3">
+
+                        <!-- Members online -->
+                        <div class="panel bg-pink-400">
+                            <div class="panel-body">
+                                <div class="heading-elements">
+                                    <span class="heading-text badge bg-pink-800">+53,6%</span>
+                                </div>
+
+                                <h3 class="no-margin text-bold">3,450</h3>
+                                Total Trips
+                                <div class="text-muted text-size-small">7 avg/week</div>
+                            </div>
+
+                            <div class="container-fluid">
+                                <div id="members-online"></div>
+                            </div>
+                        </div>
+                        <!-- /members online -->
+
+                    </div>
+
+                    <div class="col-lg-3">
+
+                        <!-- Current server load -->
+                        <div class="panel bg-blue-400">
+                            <div class="panel-body">
+                                <div class="heading-elements">
+                                    <ul class="icons-list">
+                                        <li class="dropdown">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-cog3"></i> <span class="caret"></span></a>
+                                            <ul class="dropdown-menu dropdown-menu-right">
+                                                <li><a href="#"><i class="icon-sync"></i> Update data</a></li>
+                                                <li><a href="#"><i class="icon-list-unordered"></i> Detailed log</a></li>
+                                                <li><a href="#"><i class="icon-pie5"></i> Statistics</a></li>
+                                                <li><a href="#"><i class="icon-cross3"></i> Clear list</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <h3 class="no-margin text-bold">9</h3>
+                                Trips today
+                                <div class="text-muted text-size-small">34.6% avg</div>
+                            </div>
+
+                            <div id="server-load"></div>
+                        </div>
+                        <!-- /current server load -->
+
+                    </div>
+
+                    <div class="col-lg-3">
+
+                        <!-- Today's revenue -->
+                        <div class="panel bg-blue-800">
+                            <div class="panel-body">
+                                <div class="heading-elements">
+                                    <ul class="icons-list">
+                                        <li><a data-action="reload"></a></li>
+                                    </ul>
+                                </div>
+
+                                <h3 class="no-margin text-bold">GH¢8,390</h3>
+                                Today's Spend
+                                <div class="text-muted text-size-small">GH¢7,578 avg</div>
+                            </div>
+
+                            <div id="today-revenue"></div>
+                        </div>
+                        <!-- /today's revenue -->
+
+                    </div>
+
+                    <div class="col-lg-3">
+
+                        <!-- Today's revenue -->
+                        <div class="panel bg-danger-800">
+                            <div class="panel-body">
+                                <div class="heading-elements">
+                                    <ul class="icons-list">
+                                        <li><a data-action="reload"></a></li>
+                                    </ul>
+                                </div>
+
+                                <h3 class="no-margin text-bold">GH¢118,390</h3>
+                                Total Spend for the year
+                                <div class="text-muted text-size-small">Expected GH¢337,578 avg</div>
+                            </div>
+
+                            <div id="today-revenue"></div>
+                        </div>
+                        <!-- /today's revenue -->
+
+                    </div>
+                </div>
+                <!-- /quick stats boxes -->
+
+                <!-- Sales stats -->
+                <div class="timeline-row post-full">
+
+                    <div class="panel panel-flat timeline-content">
+                        <div class="panel-heading">
+                            <h6 class="panel-title text-semibold">Daily statistics</h6>
+                            <div class="heading-elements">
+                                <span class="heading-text"><i class="icon-history position-left text-success"></i> Updated 3 hours ago</span>
+
+                                <ul class="icons-list">
+                                    <li><a data-action="reload"></a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="panel-body">
+                            <div class="chart-container">
+                                <div class="chart has-fixed-height" id="daily_stats"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /sales stats -->
+
+                <!-- Weekly stats -->
+                <div class="row">
+                    <div class="body">
+                        <div class="chart" id="sales"></div>
+                    </div>
+                </div>
+                <!-- /weekly stats -->
+
+                <!-- Schedule -->
+
+                <div class="timeline-row post-full">
+
+                    <div class="timeline-time">
+                        <a href="#">Victoria's</a> schedule
+                        <span class="text-muted">1 day ago</span>
+                    </div>
+
+                    <div class="panel panel-flat timeline-content">
+                        <div class="panel-heading">
+                            <h4 class="panel-title text-bold">Cjay's Schedule</h4>
+                            <div class="heading-elements">
+                                <ul class="icons-list">
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+														<i class="icon-arrow-down12"></i>
+													</a>
+
+                                        <ul class="dropdown-menu dropdown-menu-right">
+                                            <li><a href="#"><i class="icon-user-lock"></i> Hide user posts</a></li>
+                                            <li><a href="#"><i class="icon-user-block"></i> Block user</a></li>
+                                            <li><a href="#"><i class="icon-user-minus"></i> Unfollow user</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="#"><i class="icon-embed"></i> Embed post</a></li>
+                                            <li><a href="#"><i class="icon-blocked"></i> Report this post</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="panel-body">
+                            <div class="schedule"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /schedule -->
+
+            </div>
+        </div>
+        <!-- /timeline -->
+
+        <!-- Footer -->
+        <app-footer></app-footer>
+        <!-- /footer -->
+
+    </div>
+    <!-- /content area -->
+
+</div>
+<!-- /main content -->

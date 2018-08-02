@@ -1,0 +1,235 @@
+<!-- Main content -->
+
+  <!-- Page header -->
+  <div class="page-header">
+    <div class="breadcrumb-line">
+      <ul class="breadcrumb">
+        <li><a href="/dashboard"><i class="icon-home2 position-left"></i> Dashboard</a></li>
+        <li class="active">Book Truck</li>
+      </ul>
+    </div>
+  </div>
+  <!-- /page header -->
+
+
+  <!-- Content area -->
+  <div class="content">
+
+    <!-- Basic setup -->
+    <div class="panel panel-white">
+      <div class="panel-heading">
+        <h5 class="panel-title text-bold">Kindly fill this form to create your order to book a truck</h5>
+        <div class="heading-elements">
+          <ul class="icons-list">
+            <li><a data-action="collapse"></a></li>
+            <!-- <li><a data-action="reload"></a></li>
+			                		<li><a data-action="close"></a></li> -->
+          </ul>
+        </div>
+      </div>
+
+      <form class="panel-body" action="#">
+        <fieldset class="step" id="step1">
+          <h6 class="form-wizard-title text-bold">
+            <span class="form-wizard-count">1</span> CARGO DETAILS
+            <small class="display-block">Answer all question.</small>
+          </h6>
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>Type of Commodity<span class="text-danger">*</span></label>
+                <select [(ngModel)]="commodityType" name="commodity" data-placeholder="Select commodity" required="required" class="form-control">
+												<option></option>
+													<option value="Foods">Foods</option>
+													<option value="Equipment">Equipment</option>
+													<option value="Construction Materials">Construction Materials</option>
+													<option value="Electricals">Electricals</option>
+													<option value="Oil & Gas">Oil & Gas</option>
+													<option value="Household & Office">Household & Office</option>
+													<option value="Breakables">Breakables</option>
+											</select>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>Vehicle Type<span class="text-danger">*</span></label>
+                <select [(ngModel)]="vehicleType" name="vehicle" data-placeholder="Select vehicle" required="required" class="form-control">
+                    <option value="Flatbed Truck">Flatbed Truck</option>
+                    <option value="Lowbed Truck">Lowbed Truck</option>
+                    <option value="Box/Straight Truck">Box/Straight Truck</option>
+                    <option value="Refridgerated Truck">Refridgerated Truck</option>
+								</select>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label class="control-label">Weight of Commodity<span class="text-danger">*</span></label>
+                <div class="input-group">
+                  <input [(ngModel)]="comodityWeight" type="text" name="input_group" class="form-control" required="required" placeholder="weight">
+                  <span class="input-group-addon">tonnes</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="form-group">
+                <label class="control-label">Value of Commodity<span class="text-danger">*</span></label>
+                <div class="input-group">
+                  <input [(ngModel)]="comodityValue" type="text" name="input_group" class="form-control" required="required" placeholder="amount">
+                  <span class="input-group-addon">GHs</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </fieldset>
+
+        <fieldset class="step" id="step2">
+          <h6 class="form-wizard-title text-bold">
+            <span class="form-wizard-count">2</span> PICK UP DETAILS
+            <small class="display-block">Please input the details</small>
+          </h6>
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>Contact's Name<span class="text-danger">*</span></label>
+                <input [(ngModel)]="contactsName" type="text" name="contact_name" placeholder="name" required="required" class="form-control">
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>Contact's Phone Number<span class="text-danger">*</span></label>
+                <input [(ngModel)]="contactsNumber" type="text" name="tel" class="form-control" required="required" placeholder="012-3456-789">
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>Pickup Address<span class="text-danger">*</span></label>
+                <select [(ngModel)]="pickupLocation" name="address" data-placeholder="Address" required="required" class="form-control">
+                    <option value="Tema">Tema </option>
+                    <option value="Kumasi">Kumasi </option>
+                    <option value="Tamale">Tamale</option>
+                    <option value="Accra">Accra </option>
+								</select>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>Pickup date<span class="text-danger">*</span></label>
+                <input [(ngModel)]="pickupDate" type="date" class="form-control" required="required" name="format-date" placeholder="dd/mm/yyyy">
+              </div>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="step" id="step3">
+          <h6 class="form-wizard-title text-bold">
+            <span class="form-wizard-count">3</span> DROP OFF DETAILS
+            <small class="display-block">Please input the details</small>
+          </h6>
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>Receipient 's Name<span class="text-danger">*</span></label>
+                <input [(ngModel)]="receiverName" type="text" name="contact_name" required="required" placeholder="name" class="form-control">
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>Receipient's Phone Number<span class="text-danger">*</span></label>
+                <input [(ngModel)]="receiverNumber" type="text" name="tel" class="form-control" required="required" placeholder="012-3456-789">
+                <span class="help-block">*This number will receive a text from Truckr*</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>Drop off Address<span class="text-danger">*</span></label>
+                <select [(ngModel)]="dropoffLocation" name="address" data-placeholder="Address" required="required" class="form-control">
+                    <option value="Tema">Tema </option>
+                    <option value="Kumasi">Kumasi </option>
+                    <option value="Tamale">Tamale</option>
+                    <option value="Accra">Accra </option>
+								</select>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>Additional information:</label>
+                <textarea [(ngModel)]="info" name="additional-info" rows="5" cols="5" placeholder="Example Load the cargo as soon as you arrive." class="form-control"></textarea>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        <div class="text-right">
+          <tr>
+            <td>
+              <button type="submit" class="btn btn-blacky" required="required" data-toggle="modal" data-target="#modal_theme_primary">Book a truck <i class="icon-arrow-right14 position-right"></i></button>
+            </td>
+          </tr>
+        </div>
+      </form>
+    </div>
+    <!-- /basic setup -->
+    <!-- Primary modal -->
+    <div id="modal_theme_primary" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header ">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h1 class="modal-title center">Transporting/Delivery Fee</h1>
+          </div>
+          <hr>
+
+          <div class="modal-body">
+            <h5 class="text-bold">Pick Up Location</h5>
+            <p>Tema</p>
+
+            <hr>
+
+            <h5 class="text-bold">Drop Off Location</h5>
+            <p>Kumasi</p>
+
+            <hr>
+
+            <h5 class="text-bold">Fee</h5>
+            <i class="icon-spinner2 spinner position-left"></i>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-link" data-dismiss="modal">Cancel</button>
+            <!-- <button type="button" class="btn btn-blacky"><a href="invoice.html" target="_blank">Pay Now</a></button> -->
+
+            <button id="payStackButton" style="display:none;" onclick="payWithPayStack('nwosuchiamaka@gmail.com', '5000')"></button>
+            <button (click)='bookTruck()' type="submit" class="btn btn-blacky" required="required">Pay Now <i class="icon-arrow-right14 position-right"></i></button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /primary modal -->
+
+    <!-- Footer -->
+    <app-footer></app-footer>
+    <!-- /footer -->
+
+  </div>
+  <!-- /content area -->
+
+<!-- /main content -->

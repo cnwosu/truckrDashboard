@@ -1,0 +1,97 @@
+
+  <!-- Main navbar -->
+  <app-navbar></app-navbar>
+  <!-- /main navbar -->
+
+  <!-- Page container -->
+  <div class="page-container">
+
+    <!-- Page content -->
+    <div class="page-content">
+
+      <!-- Main sidebar -->
+      <div class="sidebar sidebar-main">
+        <div class="sidebar-content">
+
+          <!-- User menu -->
+          <div class="sidebar-user">
+            <div class="category-content">
+            </div>
+          </div>
+          <!-- /user menu -->
+          <div class="media" style="margin-left: 25px">
+            <div class="media-right">
+              <a routerLink="/new-request"><button  type="button" class="btn btn-default"><i class="icon-truck"></i> BOOK TRUCK</button></a>
+            </div>
+          </div>
+
+          <!-- Main navigation -->
+          <div class="sidebar-category sidebar-category-visible">
+            <div class="category-content no-padding">
+              <ul class="navigation navigation-main navigation-accordion">
+
+                <!-- Main -->
+                <li class="navigation-header"><span></span> <i class="icon-menu" title="Main pages"></i></li>
+                <li><a routerLink="/dashboard"><i class="icon-home4"></i> <span>Dashboard</span></a></li>
+                <li>
+                  <a ><i class="icon-history"></i> <span>Trip History</span></a>
+                  <ul>
+                    <li><a routerLink="/completed-trips" id="create"><i class="icon-checkmark-circle"></i>Completed Trips </a></li>
+                    <li><a routerLink="/cancelled-trips"><i class="icon-cancel-circle2"></i>Cancelled Trips</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a routerLink="/profile"><i class="icon-user"></i> <span>Profile</span></a>
+                </li>
+                <li>
+                  <a routerLink="/map"><i class="icon-map4"></i> <span>Map</span></a>
+                </li>
+                <li><a routerLink="/message"><i class="icon-envelop"></i> <span>Message</span></a>
+                </li>
+                <li>
+                  <a ><i class="icon-calculator2"></i> <span>Transactions</span></a>
+                  <ul>
+                    <li><a routerLink="/transactions" id="invoices"> <i class="icon-file-text"></i>Invoices </a></li>
+                    <li><a href="#" id="payments"> <i class="icon-cash3"></i>Payments</a></li>
+                    <li><a href="#" id="payments"> <i class="icon-wallet"></i>Wallet</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a routerLink="#"><i class="icon-file-upload2"></i> <span>Upload a Schedule</span></a>
+                </li>
+                <li>
+                  <a routerLink="/about"><i class="icon-info3"></i> <span>About</span></a>
+
+                </li>
+                <li>
+                  <a routerLink="#"><i class="icon-lifebuoy"></i> <span>Support</span></a>
+                  <ul>
+                    <li><a routerLink="/help" id="help"><i class="icon-aid-kit"></i>Help/FAQs </a></li>
+                    <li><a routerLink="#" id="report"><i class="icon-traffic-cone"></i>Report an Problem</a></li>
+                  </ul>
+                </li>
+                <br>
+                <li>
+                  <a href="#"><i class="icon-switch2"></i> <span>Logout</span></a>
+
+                </li>
+                <!-- /main -->
+
+              </ul>
+            </div>
+          </div>
+          <!-- /main navigation -->
+
+        </div>
+      </div>
+      <!-- /main sidebar -->
+      
+      <!-- dashboard panel -->
+        <router-outlet></router-outlet>
+      <!-- /dashboard panel -->
+    </div>
+    <!-- /page content -->
+
+  </div>
+  <!-- /page container -->
+

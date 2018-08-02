@@ -2,13 +2,70 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>TruckrBackend</title>
+  <title>Truckr Backend</title>
   <base href="/">
-
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Global stylesheets -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
+  <link href="assets/css/icons/icomoon/styles.css" rel="stylesheet" type="text/css">
+
+  <link href="assets/css/minified/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="assets/css/minified/core.min.css" rel="stylesheet" type="text/css">
+  <link href="assets/css/minified/components.min.css" rel="stylesheet" type="text/css">
+  <link href="assets/css/minified/colors.min.css" rel="stylesheet" type="text/css">
+  <link href="assets/css/main.css" rel="stylesheet" type="text/css">
+  <!-- /global stylesheets -->
+
+  <!-- Core JS files -->
+  <script type="text/javascript" src="assets/js/plugins/loaders/pace.min.js"></script>
+  <script type="text/javascript" src="assets/js/core/libraries/jquery.min.js"></script>
+  <script type="text/javascript" src="assets/js/core/libraries/bootstrap.min.js"></script>
+  <script type="text/javascript" src="assets/js/plugins/loaders/blockui.min.js"></script>
+  <!-- /core JS files -->
+
+  <!-- Theme JS files -->
+  <script type="text/javascript" src="assets/js/plugins/ui/moment/moment.min.js"></script>
+  <script type="text/javascript" src="assets/js/plugins/ui/fullcalendar/fullcalendar.min.js"></script>
+  <script type="text/javascript" src="assets/js/plugins/visualization/echarts/echarts.js"></script>
+
+  <script type="text/javascript" src="assets/js/core/app.js"></script>
+  <script type="text/javascript" src="assets/js/pages/timelines.js"></script>
+  <!-- /theme JS files -->
+
+    <!-- Global stylesheets -->
+
+    <!-- Theme JS files -->
+    <script type="text/javascript" src="assets/js/plugins/forms/wizards/steps.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugins/forms/selects/select2.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugins/forms/styling/uniform.min.js"></script>
+    <script type="text/javascript" src="assets/js/core/libraries/jasny_bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugins/forms/validation/validate.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugins/extensions/cookie.js"></script>
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+
+    <!-- <script type="text/javascript" src="assets/js/pages/wizard_form.js"></script> -->
+    <!-- /theme JS files -->
 </head>
 <body>
-  <app-root></app-root>
-</body>
+    <app-root></app-root>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGJoBJZgUh7iOZsgZykt5HckOGkH9UQ2Q"></script>
+    <script>
+      function payWithPayStack(email, amount) {
+        let handler = PaystackPop.setup({
+          key: 'pk_test_04b41a656465d008c0ee744eb22f28cb64ac9f89',
+          email: email,
+          amount: amount * 100,
+          ref: '' + Math.floor((Math.random() * 1000000000) + 1),
+          callback: function (response) {
+            window.location.href = '/map'
+          },
+          onClose: function () {
+          }
+        });
+        handler.openIframe();
+      };
+    </script></body>
 </html>
