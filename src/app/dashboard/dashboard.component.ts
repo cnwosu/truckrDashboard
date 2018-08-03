@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { environment, firebaseConfig } from '../../environments/environment.prod';
+import * as firebase from 'firebase';
 
 @Component({
   selector: 'app-dashboard',
@@ -11,5 +13,10 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  signOut(): void {
+    firebase.auth().signOut().then(function () {
+      // window.location.href = `${firebaseConfig.corporateSiteUrl}`;
+      this.route.navigate(['/']);
+    });
+  }
 }

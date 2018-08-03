@@ -20,7 +20,7 @@ export class SignupComponent implements OnInit {
     firebase.auth().onAuthStateChanged((user) => {
       if (user) {
         // window.location.href = `${firebaseConfig.corporateSiteUrl}/auth-redirect`;
-        this.route.navigate(['/auth-redirect']);
+        this.route.navigate(['/dashboard']);
       } else {
         this.checkUser();
       }

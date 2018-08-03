@@ -25,7 +25,8 @@
   <script type="text/javascript" src="assets/js/core/libraries/bootstrap.min.js"></script>
   <script type="text/javascript" src="assets/js/plugins/loaders/blockui.min.js"></script>
   <!-- /core JS files -->
-
+  <script src="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css" />
   <!-- Theme JS files -->
   <script type="text/javascript" src="assets/js/plugins/ui/moment/moment.min.js"></script>
   <script type="text/javascript" src="assets/js/plugins/ui/fullcalendar/fullcalendar.min.js"></script>
@@ -60,7 +61,7 @@
           amount: amount * 100,
           ref: '' + Math.floor((Math.random() * 1000000000) + 1),
           callback: function (response) {
-            window.location.href = '/map'
+            window.location.href = '/dashboard/map'
           },
           onClose: function () {
           }

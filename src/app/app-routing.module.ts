@@ -14,19 +14,25 @@ import { NewRequestComponent } from './dashboard/new-request/new-request.compone
 import { ContentComponent } from './dashboard/content/content.component';
 import { ProfileComponent } from './dashboard/profile/profile.component';
 import { UserComponent } from './dashboard/user/user.component';
+import { SignupComponent } from './accounts/signup/signup.component';
+import { SigninComponent } from './accounts/signin/signin.component';
 
 
 const routes: Routes = [
   {
     path: '',
+    component: SignupComponent
+  },
+  {
+    path: 'signin',
+    component: SigninComponent
+  },
+  {
+    path: 'dashboard',
     component: DashboardComponent,
     children: [
       {
         path: '',
-        component: ContentComponent
-      },
-      {
-        path: 'dashboard',
         component: ContentComponent
       },
       {

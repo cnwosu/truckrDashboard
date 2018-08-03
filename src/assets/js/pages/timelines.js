@@ -153,29 +153,29 @@ $(function() {
 
                 // Add legend
                 legend: {
-                    data: ['Clicks','Visits','Sales']
+                    data: ['Bookings',' ','']
                 },
 
                 // Horizontal axis
                 xAxis: [{
                     type: 'category',
-                    data: ['00:00','02:00','04:00','06:00','08:00','10:00','12:00','14:00','16:00','18:00','20:00','22:00']
+                    data: ['January','February','March','April','May','June','July','August','September','October','November','December']
                 }],
 
                 // Vertical axis
                 yAxis: [
                     {
                         type: 'value',
-                        name: 'Visits',
+                        name: 'Bookings',
                         axisLabel: {
-                            formatter: '{value}k'
+                            formatter: '{value}'
                         }
                     },
                     {
                         type: 'value',
-                        name: 'Clicks',
+                        name: '',
                         axisLabel: {
-                            formatter: '{value}k'
+                            formatter: '{value}'
                         }
                     }
                 ],
@@ -183,18 +183,18 @@ $(function() {
                 // Add series
                 series: [
                     {
-                        name: 'Clicks',
+                        name: 'Bookings',
                         type: 'bar',
-                        data: [2, 15, 27, 34, 40, 70, 100, 75, 50, 38, 22, 12]
+                        data: [2, 15, 27, 34, 40, 70, 96, 75, 33, 44, 75, 88]
                     },
                     {
-                        name: 'Visits',
-                        type: 'bar',
+                        name: '',
+                        type: '',
                         data: [13, 16, 33, 38, 48, 110, 125, 90, 68, 49, 35, 23]
                     },
                     {
-                        name: 'Sales',
-                        type: 'line',
+                        name: '',
+                        type: '',
                         yAxisIndex: 1,
                         data: [1, 5, 7, 10, 11, 13, 15, 18, 16, 14, 12, 6]
                     }
